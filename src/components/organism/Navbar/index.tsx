@@ -1,5 +1,4 @@
 import { Children, ReactNode, useState } from "react";
-import { ReactComponent as Logo } from "../../../assets/images/logo.svg";
 import Brand from "components/atom/Brand";
 type Props = {
   children: ReactNode;
