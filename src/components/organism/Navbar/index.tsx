@@ -1,5 +1,6 @@
 import { Children, ReactNode, useState } from "react";
-import { ReactComponent as Logo } from "../../../../public/Logo1.svg";
+import { ReactComponent as Logo } from "../../../assets/images/logo.svg";
+import Brand from "components/atom/Brand";
 type Props = {
   children: ReactNode;
   cta: ReactNode;
@@ -16,7 +17,7 @@ function Navbar({ children, cta, pathname, className }: Props) {
   return (
     <header className="sticky top-0 z-10 backdrop-filter backdrop-blur-lg bg-white bg-opacity-30 border-b border-gray-200">
       <div className="px-4 container mx-auto flex justify-between items-center py-8">
-        <Logo className="w-44 h-20 mr-12 flex items-center  " />
+        <Brand className="w-16 h-10 mr-12 flex items-center" />
         <button
           className="relative z-30 w-7 h-7 flex lg:hidden flex-col items-center justify-center transition-all gap-y-1 hover:gap-y-2"
           onClick={() => setMenuActive((prev) => !prev)}
