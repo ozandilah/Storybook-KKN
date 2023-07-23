@@ -1,9 +1,8 @@
 type Props = {
-  color?: "light" | "dark";
   className?: string;
 };
 
-function Brand({ color, className }: Props) {
+function Brand({ className }: Props) {
   return (
     <div className={className || "w-20 h-10"}>
       <svg
