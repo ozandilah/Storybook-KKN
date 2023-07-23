@@ -1,5 +1,5 @@
 import { Children, ReactNode, useState } from "react";
-import Brand from "components/atom/Brand";
+import Brand from "../../atom/Brand";
 type Props = {
   children: ReactNode;
   cta: ReactNode;
