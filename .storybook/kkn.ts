@@ -4,8 +4,8 @@ import { create } from "@storybook/theming/create";
 
 export default create({
   base: "light",
-  brandTitle: "Storybook Kkn Mba Nura",
-  brandUrl: "https://ozandilah.github.io/",
+  brandTitle: "KKN",
+  brandUrl: "https://ozandilah.github.io/Storybook-KKN",
   brandImage: "/logo",
   brandTarget: "_self",
 });
