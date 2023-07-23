@@ -1,6 +1,6 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { Children, useState } from "react";
-import { ReactComponent as Logo } from "../../../assets/images/logo.svg";
+import { ReactComponent as Logo } from "../../../../public/Logo1.svg";
 function Navbar({ children, cta, pathname, className }) {
     const [isMenuActive, setMenuActive] = useState(false);
     return (_jsx("header", { className: "sticky top-0 z-10 backdrop-filter backdrop-blur-lg bg-white bg-opacity-30 border-b border-gray-200", children: _jsxs("div", { className: "px-4 container mx-auto flex justify-between items-center py-8", children: [_jsx(Logo, { className: "w-44 h-20 mr-12 flex items-center  " }), _jsxs("button", { className: "relative z-30 w-7 h-7 flex lg:hidden flex-col items-center justify-center transition-all gap-y-1 hover:gap-y-2", onClick: () => setMenuActive((prev) => !prev), children: [_jsx("span", { className: [
