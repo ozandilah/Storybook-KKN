@@ -1,0 +1,16 @@
+import { Meta, Canvas, Story, Source } from "@storybook/addon-docs";
+import dedent from "ts-dedent";
+import "assets/css/index.css";
+import FeaturedMenuSatu from "./example/Sample";
+
+<Meta title="Components/FeaturedMenuSatu" />
+
+# FeaturedMenuSatu
+
+A most import components that simply let user interact with the app,[[Default Example](/docs/components-FeaturedMenuSatu-example--default)] if you want to see in action
+
+export const Template = (args) => <FeaturedMenuSatu {...args} />;
+
+<Story name="Introduction" args={{}}>
+  {Template.bind({})}
+</Story>
