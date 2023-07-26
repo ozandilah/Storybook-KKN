@@ -5,6 +5,7 @@ import React from "react";
 import { ComponentMeta } from "@storybook/react";
 
 import SectionDua from "../../../components/moleculs/Section-2";
+import SectionDuaImage from "../../../assets/images/section-2.png";
 
 export default {
   /* 👇 The title prop is optional.
@@ -24,6 +25,6 @@ Default.args = {
       "We do really care to our students’ future career\
 so it would be good if you are taking a quick interview",
   },
-  image: "/images/image-2.jpg",
+  image: SectionDuaImage,
   title: "image",
 };

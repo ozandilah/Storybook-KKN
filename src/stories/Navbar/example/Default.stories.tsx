@@ -7,7 +7,7 @@ import { ComponentMeta } from "@storybook/react";
 import Navbar from "../../../components/organism/Navbar";
 import Button from "../../../components/atom/Button";
 import Link from "../../../components/Link";
-
+import mainBanner from "../../../assets/images/mainHeader.png";
 export default {
   /* 👇 The title prop is optional.
    * See https://storybook.js.org/docs/react/configure/overview#configure-story-loading
@@ -48,6 +48,9 @@ Default.args = {
       </Button>
     </>
   ),
-  pathname: "/program",
+  pathname: "/desa",
+
   className: { active: "text-yellow", idle: "text-black" },
+  image: mainBanner,
+  title: "main banner",
 };

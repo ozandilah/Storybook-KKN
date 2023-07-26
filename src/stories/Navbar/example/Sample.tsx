@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../../../components/organism/Navbar";
 import Button from "../../../components/atom/Button";
 import Link from "../../../components/Link";
+import mainBanner from "../../../assets/images/mainHeader.png";
 function Sample() {
   return (
     <Navbar
@@ -14,6 +15,8 @@ function Sample() {
       }
       pathname="/home"
       className={{ active: "text-yellow", idle: "text-black" }}
+      image={mainBanner}
+      title="main banner"
     >
       <Link href="/home">
         <a>Home</a>

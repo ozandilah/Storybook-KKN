@@ -11,6 +11,10 @@ module.exports = {
       fontFamily: {
         sans: ["Poppins"],
       },
+      spacing: {
+        "3/4": "75%", // 4:3 aspect ratio
+        "16/9": "56.25%", // 16:9 aspect ratio
+      },
     },
   },
   plugins: [],

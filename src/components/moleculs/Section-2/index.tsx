@@ -25,7 +25,10 @@ function SectionDua({ content, image, title, button }: Props) {
           <div>{button}</div>
         </div>
         <div className="relative md:group-odd:order-1 md:group-even:order-2">
-          <div className="relative max-w-full w-[460px] h-[449px] xl:w-[460px] xl:h-[449px] rounded-tr-[59px] rounded-bl-[59px] rounded-tl-3xl rounded-br-3xl overflow-hidden">
+          <div
+            className="relative max-w-full w-[270px] h-[245px]  sm:w-[306px] sm:h-[299px]xl:w-[460px] md:h-[449px]
+            md:w-[460px] xl:h-[449px] rounded-tr-[59px] rounded-bl-[59px] rounded-tl-3xl rounded-br-3xl overflow-hidden"
+          >
             {typeof image === "string" ? (
               <img src={image} alt={title} />
             ) : (
