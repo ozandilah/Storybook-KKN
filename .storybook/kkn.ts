@@ -6,6 +6,6 @@ export default create({
   base: "light",
   brandTitle: "KKN",
   brandUrl: "https://ozandilah.github.io/Storybook-KKN",
-  brandImage: "/logo",
+  brandImage: "/logo.png",
   brandTarget: "_self",
 });

@@ -1,6 +1,11 @@
-import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
-import configs from "./config";
-import { cloneElement } from "react";
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const jsx_runtime_1 = require("react/jsx-runtime");
+const config_1 = __importDefault(require("./config"));
+const react_1 = require("react");
 function Button(props) {
     let { state } = props;
     if (props.isDisabled)
@@ -11,7 +16,7 @@ function Button(props) {
         // py-2 px-6 sama dengan pt dan pt dibawah
         // select none tidak bisa di block
         "py-2 px-6  font-medium rounded-full relative appearance-none focus:outline-none transition-all duration-300 inline-flex items-center select-none overflow-hidden",
-        configs?.state?.[state] || "",
+        config_1.default?.state?.[state] || "",
         props.className || "",
     ];
     let returnChildren = props.children;
@@ -20,22 +25,22 @@ function Button(props) {
         returnChildren = props.children.props.children;
         returnContent = props.children.props.children.props.children;
     }
-    const children = cloneElement(returnChildren, {
+    const children = (0, react_1.cloneElement)(returnChildren, {
         ...props.children.props,
         disabled: props.isDisabled || props.isLoading,
-        children: (_jsxs(_Fragment, { children: [_jsx("span", { className: [
+        children: ((0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, { children: [(0, jsx_runtime_1.jsx)("span", { className: [
                         "transition-all duration-300 inline-flex items-center",
                         props.isLoading
                             ? "-top-full opacity-0 invisible"
                             : "top-0 opacity-100 visible",
-                    ].join(" "), children: returnContent }), _jsx("span", { className: [
+                    ].join(" "), children: returnContent }), (0, jsx_runtime_1.jsx)("span", { className: [
                         "transition-all duration-300 absolute left-0 right-0 bottom-0 z-10 inline-flex items-center justify-center",
                         props.isLoading ? "top-0 opacity-100" : "-top-full opacity-0",
-                    ].join(" "), children: _jsxs("svg", { className: "animate-spin w-5 h-5", viewBox: "0 0 28 28", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: [_jsx("circle", { opacity: "0.2", cx: "14", cy: "14", r: "13", className: "stroke-white", "stroke-width": "2" }), _jsx("path", { d: "M14 1C21.1797 1 27 6.8203 27 14C27 18.0209 25.1745 21.6154 22.3071 24", className: "stroke-white", "stroke-width": "2" })] }) })] })),
+                    ].join(" "), children: (0, jsx_runtime_1.jsxs)("svg", { className: "animate-spin w-5 h-5", viewBox: "0 0 28 28", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: [(0, jsx_runtime_1.jsx)("circle", { opacity: "0.2", cx: "14", cy: "14", r: "13", className: "stroke-white", "stroke-width": "2" }), (0, jsx_runtime_1.jsx)("path", { d: "M14 1C21.1797 1 27 6.8203 27 14C27 18.0209 25.1745 21.6154 22.3071 24", className: "stroke-white", "stroke-width": "2" })] }) })] })),
     });
-    return cloneElement(children, {
+    return (0, react_1.cloneElement)(children, {
         className: className.join(" "),
         state,
     });
 }
-export default Button;
+exports.default = Button;

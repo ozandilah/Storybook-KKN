@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const configs = {
     state: {
         primary: "border-2 border-transparent bg-orange hover:bg-orange focus:bg-orange active:bg-orange text-white",
@@ -7,4 +9,4 @@ const configs = {
         loading: "border-2 border-transparent bg-soft-gray text-grey",
     },
 };
-export default configs;
+exports.default = configs;

@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const configs = {
     state: {
         success: "bg-soft-green border border-green text-green",
@@ -5,4 +7,4 @@ const configs = {
         danger: "bg-soft-red border border-red text-red",
     },
 };
-export default configs;
+exports.default = configs;

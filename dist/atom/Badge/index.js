@@ -1,13 +1,18 @@
-import { jsx as _jsx } from "react/jsx-runtime";
-import configs from "./config";
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const jsx_runtime_1 = require("react/jsx-runtime");
+const config_1 = __importDefault(require("./config"));
 function Badge({ 
 // destructer
 children, state, className, }) {
     const combineClassName = [
         "py-1 px-4  rounded-full inline-flex items-center",
-        configs?.state?.[state] || "",
+        config_1.default?.state?.[state] || "",
         className || "",
     ];
-    return (_jsx("span", { className: combineClassName.join(" "), children: children && state }));
+    return ((0, jsx_runtime_1.jsx)("span", { className: combineClassName.join(" "), children: children && state }));
 }
-export default Badge;
+exports.default = Badge;

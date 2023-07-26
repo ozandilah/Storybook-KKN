@@ -1,3 +1,5 @@
-import { cloneElement, forwardRef } from "react";
-const Link = forwardRef((props, ref) => cloneElement(props.children, { ref, href: props.href }));
-export default Link;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const react_1 = require("react");
+const Link = (0, react_1.forwardRef)((props, ref) => (0, react_1.cloneElement)(props.children, { ref, href: props.href }));
+exports.default = Link;
