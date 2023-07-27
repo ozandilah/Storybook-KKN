@@ -8,7 +8,7 @@ const react_1 = require("react");
 const Brand_1 = __importDefault(require("../../atom/Brand"));
 function Navbar({ children, cta, pathname, className, image, title }) {
     const [isMenuActive, setMenuActive] = (0, react_1.useState)(false);
-    return ((0, jsx_runtime_1.jsxs)("header", { className: "sticky top-0 z-50 bg-white backdrop-filter backdrop-blur-lg bg-opacity-30", children: [(0, jsx_runtime_1.jsx)("nav", { className: "bg-opacity-30", children: (0, jsx_runtime_1.jsxs)("div", { className: "px-6 container mx-auto flex justify-between items-center py-8", children: [(0, jsx_runtime_1.jsx)(Brand_1.default, { className: "w-16 h-10 mr-12 flex items-center" }), (0, jsx_runtime_1.jsxs)("button", { className: "relative z-30 w-7 h-7 flex lg:hidden flex-col items-center justify-center transition-all gap-y-1 hover:gap-y-2", onClick: () => setMenuActive((prev) => !prev), children: [(0, jsx_runtime_1.jsx)("span", { className: [
+    return ((0, jsx_runtime_1.jsxs)("header", { className: "", children: [(0, jsx_runtime_1.jsx)("nav", { className: "sticky top-0 z-50 bg-white backdrop-filter backdrop-blur-lg bg-opacity-30", children: (0, jsx_runtime_1.jsxs)("div", { className: "px-6 container mx-auto flex justify-between items-center py-8", children: [(0, jsx_runtime_1.jsx)(Brand_1.default, { className: "w-16 h-10 mr-12 flex items-center" }), (0, jsx_runtime_1.jsxs)("button", { className: "relative z-30 w-7 h-7 flex lg:hidden flex-col items-center justify-center transition-all gap-y-1 hover:gap-y-2", onClick: () => setMenuActive((prev) => !prev), children: [(0, jsx_runtime_1.jsx)("span", { className: [
                                         "w-7 h-1 bg-yellow transition-all",
                                         isMenuActive ? "absolute top-3 rotate-45" : "rotate-0",
                                     ].join(" ") }), (0, jsx_runtime_1.jsx)("span", { className: [
@@ -18,11 +18,15 @@ function Navbar({ children, cta, pathname, className, image, title }) {
                                         "w-7 h-1 bg-yellow transition-all",
                                         isMenuActive ? "absolute top-3 -rotate-45" : "rotate-0",
                                     ].join(" ") })] }), (0, jsx_runtime_1.jsxs)("div", { className: [
-                                "bg-white z-20 gap-y-8 flex w-full flex-col  lg:flex-row items-center justify-center lg:justify-between backdrop-filter backdrop-blur-lg bg-opacity-30",
-                                isMenuActive ? "flex fixed inset-0" : "relative hidden md:flex",
+                                "  gap-y-8 flex w-full flex-col  lg:flex-row items-center justify-center lg:justify-between ",
+                                isMenuActive
+                                    ? "flex fixed inset-0 bg-white z-20 backdrop-filter backdrop-blur-lg bg-opacity-70 justify-center -bottom-full py-80 "
+                                    : "relative hidden md:flex",
                             ].join(" "), children: [(0, jsx_runtime_1.jsx)("ul", { className: [
                                         "flex lg:flex flex-col items-center gap-y-8 ml-auto lg:ml-0 mr-auto gap-x-8",
-                                        isMenuActive ? "flex" : "md:hidden md:flex-row",
+                                        isMenuActive
+                                            ? "font-bold lg:flex lg:justify-between"
+                                            : "md:hidden md:flex-row",
                                     ].join(" "), children: react_1.Children.toArray(children).map((menu, i) => {
                                         return ((0, jsx_runtime_1.jsx)("li", { className: "", children: (0, jsx_runtime_1.jsx)(menu.type, { ...menu.props, className: pathname === menu.props.href
                                                     ? className.active

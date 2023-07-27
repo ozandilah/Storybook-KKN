@@ -1,19 +1,19 @@
 import { Children, ReactNode, useState } from "react";
 import Brand from "../../atom/Brand";
 type Props = {
-  children: ReactNode;
-  cta: ReactNode;
-  pathname: string;
+  children: ReactNode,
+  cta: ReactNode,
+  pathname: string,
   className: {
-    active: string;
-    idle: string;
-  };
-  title: string;
-  image: string | ReactNode;
+    active: string,
+    idle: string,
+  },
+  title: string,
+  image: string | ReactNode,
 };
 
 function Navbar({ children, cta, pathname, className, image, title }: Props) {
-  const [isMenuActive, setMenuActive] = useState<boolean>(false);
+  const [isMenuActive, setMenuActive] = useState < boolean > false;
 
   return (
     <header className="">
@@ -48,16 +48,14 @@ function Navbar({ children, cta, pathname, className, image, title }: Props) {
             className={[
               "  gap-y-8 flex w-full flex-col  lg:flex-row items-center justify-center lg:justify-between ",
               isMenuActive
-                ? "flex fixed inset-0 bg-white z-20 backdrop-filter backdrop-blur-lg bg-opacity-70 justify-center -bottom-full py-80 "
+                ? "flex fixed  flex-grow inset-0 bg-white z-20 backdrop-filter backdrop-blur-lg bg-opacity-30 justify-center items-center"
                 : "relative hidden md:flex",
             ].join(" ")}
           >
             <ul
               className={[
                 "flex lg:flex flex-col items-center gap-y-8 ml-auto lg:ml-0 mr-auto gap-x-8",
-                isMenuActive
-                  ? "font-bold lg:flex lg:justify-between"
-                  : "md:hidden md:flex-row",
+                isMenuActive ? "flex flex-col" : "md:hidden md:flex-row",
               ].join(" ")}
             >
               {Children.toArray(children).map((menu: any, i: number) => {
