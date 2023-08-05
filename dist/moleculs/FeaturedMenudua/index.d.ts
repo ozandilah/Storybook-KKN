@@ -1,8 +1,7 @@
 import { ReactNode } from "react";
 type Props = {
-    title: string;
     image: string | ReactNode;
-    preimage?: string;
+    button: ReactNode;
 };
-declare function FeaturedMenuDua({ title, image, preimage }: Props): import("react/jsx-runtime").JSX.Element;
+declare function FeaturedMenuDua({ image, button }: Props): import("react/jsx-runtime").JSX.Element;
 export default FeaturedMenuDua;
